@@ -59,3 +59,49 @@ for (let i = 0; i < 6; i++) {
 </br>
 
 ### Nested Loops
+
+Loops can be nested inside another loop, see example:
+
+```
+for (var x = 0; x < 5; x = x + 1) {
+  for (var y = 0; y < 3; y = y + 1) {
+    console.log(x + "," + y);
+  }
+}
+```
+
+> **_Prints:_** </br>
+> 0, 0 </br>
+> 0, 1 </br>
+> 0, 2 </br>
+> 1, 0 </br>
+> 1, 1 </br>
+> 1, 2 </br>
+> 2, 0 </br>
+> 2, 1 </br>
+> 2, 2 </br>
+> 3, 0 </br>
+> 3, 1 </br>
+> 3, 2 </br>
+> 4, 0 </br>
+> 4, 1 </br>
+> 4, 2 </br>
+
+For each value of `x` in the outer loop, the inner loop executes completely. The outer loop startes with `x = 0`, and then the inner loop completes its cycle with all values of `y`.
+
+Once the inner loop finishes iterating over `y`, the outer loop continues to the next value, `x = 1`, and the inner loop starts again.
+
+</br>
+
+## Increment and Decrement
+
+**_Summary of operators_**
+
+```
+x++ // x = x + 1
+x-- // x = x - 1
+x += 3 // x = x + 3
+x -+ 6 // x = x -6
+x *= 2 // x = x * 2
+x /= 5 // x = x / 5
+```
