@@ -18,7 +18,7 @@ while (start < 10) {
 }
 ```
 
-> **_Prints:_** \n
+> **_Prints:_**
 > 0
 > 1
 > 2
