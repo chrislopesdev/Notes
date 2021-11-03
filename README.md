@@ -1,2 +1,3 @@
 # Notes
-My notes on web development.
+
+These are my notes on web development.
