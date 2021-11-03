@@ -6,7 +6,7 @@
 
 Sometimes functions can take in parameters.
 
-```
+```javascript
 function reheatPizza(numSlices) {
   // code that completes reheat settings
 }
@@ -14,7 +14,7 @@ function reheatPizza(numSlices) {
 
 Multiple parameters can be used and are separated by a comma.
 
-```
+```javascript
 function addNumbers(a, b) {
   console.log(a + b);
 }
@@ -22,7 +22,7 @@ function addNumbers(a, b) {
 
 Other functions do not require any parameters.
 
-```
+```javascript
 function sayHello() {
   console.log('Hello!);
 }
@@ -35,14 +35,14 @@ function sayHello() {
 
 Functions can be stored inside variables, these are known as **_function expressions_**.
 
-```
-var catSays = function(maxNumber) {
+```javascript
+var catSays = function (maxNumber) {
   var catMessage = "";
   for (let i = 0; i < maxNumber; i++) {
     catMessage += "meow ";
   }
   return catMessage;
-}
+};
 ```
 
 The function keyword no longer has a name and is considered an **_anonymous function_**.
@@ -51,14 +51,14 @@ The function keyword no longer has a name and is considered an **_anonymous func
 
 Being able to store functions in variables makes it easy to pass the function into another function. A function passed into another function is called a **_callback_**.
 
-```
-var catSays = function(maxNumber) {
+```javascript
+var catSays = function (maxNumber) {
   var catMessage = "";
   for (let i = 0; i < maxNumber; i++) {
     catMessage += "meow ";
   }
   return catMessage;
-}
+};
 
 //function declaration helloCat accepting a callback
 function helloCat(callback) {
@@ -73,7 +73,7 @@ helloCat(catSays);
 
 You can pass a function as an argument to another function.
 
-```
+```javascript
 // Function expression that assigns the function displayFavorite
 // to the variable favoriteMovie
 var favoriteMovie = function displayFavorite(movieName) {
@@ -94,7 +94,7 @@ movies(favoriteMovie, "Finding Nemo");
 
 You can bypass the first assignment of the function by passing the function to movies() function inline:
 
-```
+```javascript
 // Function declaration that takes in two arguments: a function for displaying
 // a message, along with a name of a movie
 function movies(messageFunction, name) {
@@ -124,7 +124,7 @@ Anonymous inline function expressions are often used with function callbacks tha
 
 The `return` statements allows us to return a value from our function instead of just printing to the console. A function will always return a value. If a `return` value is not specified, the function will return `undefined`. The `return` keyword **_will exit the function_** and return a value.
 
-```
+```javascript
 function addNumbers(a, b) {
   return a + b;
 }
@@ -134,7 +134,7 @@ function addNumbers(a, b) {
 
 You can store a return value in a variable:
 
-```
+```javascript
 function add(a, b) {
   return a + b;
 }
@@ -149,10 +149,10 @@ let sum = add(5, 10);
 
 To get the function to work, you must **_call_** or **_invoke_** the function using its name followed by parenthesis and any **_arguments_** that need to be passed into it. A function is like a machine, you can build it, but it wont do anything unless you turn it on.
 
-```
+```javascript
 // declares the sayHello function
 function sayHello() {
-  var message = "Hello!"
+  var message = "Hello!";
   return message; // returns value instead of printing it
 }
 
@@ -169,9 +169,9 @@ console.log(sayHello());
 
 A **_parameter_** is a placeholder used in declaring your functions. The **_arguments_** are passed into the function when calling it.
 
-```
+```javascript
 function sayMyName(parameter) {
-  console.log("Hello " + parameter)
+  console.log("Hello " + parameter);
 }
 
 sayMyName(argument);
@@ -192,7 +192,7 @@ Identifiers that can be accessed anywhere within your program. This may seem eas
 
 Identifiers that can be accessed anywhere inside your function or block it was defined, but not outside of it. If an identifier is unavailable in function scope it will continue up the scope chain until it gets to the global scope.
 
-```
+```javascript
 let name = "chris"; // global scope
 
 function myAge() {
@@ -209,7 +209,7 @@ console.log(age): // prints error
 
 This can be an issue when reusing variable names in global and function scope:
 
-```
+```javascript
 var bookTitle = "Le Petit Prince";
 console.log(bookTitle);
 
@@ -229,7 +229,7 @@ console.log(bookTitle);
 
 bookTitle got reassigned in the global scope. To avoid this issue we should delcare the variable in the function scope.
 
-```
+```javascript
 var bookTitle = "Le Petit Prince";
 console.log(bookTitle);
 
@@ -258,7 +258,7 @@ JavaScript hoists function declarations and variable declarations to the top of 
 
 > **_Note:_** Function expressions are **_NOT_** hoisted.
 
-```
+```javascript
 sayGretting();
 
 function sayGreeting() {
@@ -268,7 +268,7 @@ function sayGreeting() {
 
 This will be interpreted as:
 
-```
+```javascript
 function sayGreeting() {
   console.log(greeting);
 }
@@ -278,7 +278,7 @@ sayGretting();
 
 Variable Hoisting:
 
-```
+```javascript
 function sayGreeting() {
   console.log(greeting);
   var greeting = "hello";
@@ -289,7 +289,7 @@ sayGretting();
 
 This will be interpreted as:
 
-```
+```javascript
 function sayGreeting() {
   var greeting;
   console.log(greeting);
