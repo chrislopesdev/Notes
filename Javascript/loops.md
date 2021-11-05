@@ -10,7 +10,7 @@
 
 Example:
 
-```
+```javascript
 let start = 0;
 while (start < 10) {
   console.log(start);
@@ -35,7 +35,7 @@ If a loop is missing any of these three things, the loop is broken, and can resu
 
 Most common loop. The `for loop` explicitly forces you to define the start and stop points and each step of the loop. If you're missing any of these you will get an `Uncaught SyntaxError: Unexpected token`
 
-```
+```javascript
 for (start; stop; step) {
   // do something
 }
@@ -43,9 +43,9 @@ for (start; stop; step) {
 
 Example of a loop that counts from 0 - 5:
 
-```
+```javascript
 for (let i = 0; i < 6; i++) {
-  console.log(i)
+  console.log(i);
 }
 ```
 
@@ -62,7 +62,7 @@ for (let i = 0; i < 6; i++) {
 
 Loops can be nested inside another loop, see example:
 
-```
+```javascript
 for (var x = 0; x < 5; x = x + 1) {
   for (var y = 0; y < 3; y = y + 1) {
     console.log(x + "," + y);
@@ -97,11 +97,11 @@ Once the inner loop finishes iterating over `y`, the outer loop continues to the
 
 **_Summary of operators_**
 
-```
-x++ // x = x + 1
-x-- // x = x - 1
-x += 3 // x = x + 3
-x -+ 6 // x = x -6
-x *= 2 // x = x * 2
-x /= 5 // x = x / 5
+```javascript
+x++; // x = x + 1
+x--; // x = x - 1
+x += 3; // x = x + 3
+x - +6; // x = x -6
+x *= 2; // x = x * 2
+x /= 5; // x = x / 5
 ```

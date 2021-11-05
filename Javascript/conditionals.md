@@ -2,7 +2,7 @@
 
 ![Flow Chart](https://d17h27t6h515a5.cloudfront.net/topher/2016/December/584853f3_buy-the-item-cropped/buy-the-item-cropped.jpg)
 
-```
+```javascript
 let price = 15 // price of hammer;
 let money = 20 // how much money I have;
 
@@ -17,15 +17,15 @@ if (money >= price) {
 
 These let you execute code based on a condition or set of conditions being met.
 
-```
-if ( true ) {
+```javascript
+if (true) {
   // run this code;
 } else {
   // run this code;
 }
 ```
 
-```
+```javascript
 var a = 1;
 var b = 2;
 
@@ -52,7 +52,7 @@ In some situations, two conditionals aren't enough.
 
 In Javascript, you can represent the secondary check by using and extra `if` statement called an `else if` statement.
 
-```
+```javascript
 let weather = "sunny";
 
 if (weather === "snow") {
@@ -72,20 +72,20 @@ Logical operators include:
 
 `&&` => logical AND => returns `true` only if both sides of expression are `true`
 
-```
-value1 && value2
+```javascript
+value1 && value2;
 ```
 
 `||` => logical OR => returns `true` if **_either or both_** sides of the expression are `true`
 
-```
-value1 || value2
+```javascript
+value1 || value2;
 ```
 
 `!` => logical NOT ("bang") => returns the **_pposite_** of `value1`. If `value1` is `true`, then `!value1` is `false`.
 
-```
-!value1
+```javascript
+!value1;
 ```
 
 </br>
@@ -116,7 +116,7 @@ Everything not falsy is truthy!
 
 Example conditonal:
 
-```
+```javascript
 var isGoing = true;
 var color;
 
@@ -135,13 +135,13 @@ This is too long for simply assigning a value to a variable.
 
 The **_ternary operator_** provides a shortcut to if...else statements.
 
-```
+```javascript
 conditonal ? (if condition true) : (if condition false)
 ```
 
 To use the ternary operator, first provide a conditional statement on the left-side of the `?`. Then, between the `?` and `:` write the code that would run if the condition is `true` and on the right-hand side of the `:` write the code that would run if the condition is `false`. For example, you can rewrite the example code above as:
 
-```
+```javascript
 var isGoing = true;
 var color = isGoing ? "green" : "red";
 console.log(color);
@@ -153,7 +153,7 @@ console.log(color);
 
 If you find yourself repeating `else if` statements where each condition is based on the same value, you should consider a switch statement.
 
-```
+```javascript
 if (option === 1) {
   console.log("You selected option 1.");
 } else if (option === 2) {
@@ -171,7 +171,7 @@ if (option === 1) {
 
 A **_switch statement_** is another way to chain multiple `else if` statements that are basedon the same value **_without using conditional statements_**. Instead you _switch_ which piece of code is executed based on a value.
 
-```
+```javascript
 switch (option) {
   case 1:
     console.log("You selected option 1.");
@@ -200,9 +200,9 @@ The **_break statement_** can be used to terminate a switch statement and transf
 
 Some situations may call for "falling-through". For example, a hierarchical-type structure.
 
-```
+```javascript
 var tier = "nsfw deck";
-var output = "You’ll receive "
+var output = "You’ll receive ";
 
 switch (tier) {
   case "deck of legends":
@@ -210,7 +210,8 @@ switch (tier) {
   case "collector's deck":
     output += "a signed version of the Exploding Kittens deck, ";
   case "nsfw deck":
-    output += "one copy of the NSFW (Not Safe for Work) Exploding Kittens card game and ";
+    output +=
+      "one copy of the NSFW (Not Safe for Work) Exploding Kittens card game and ";
   default:
     output += "one copy of the Exploding Kittens card game.";
 }
