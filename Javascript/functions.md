@@ -1,5 +1,24 @@
 # FUNCTIONS
 
+A **_function_** is a process which takes some input, called arguments, and produces some output called a return value. Functions may serve the following purposes:
+
+- **_Mapping:_** Produce some output based on given inputs. A function **_maps_** input values to output values.
+- **_Procedures:_** A function may be called to performe a sequence of steps. The sequence is known as a procedure, and programming in this style is known as procedural programming.
+- **_I/0:_** Some functions exist to communicate with other parts of the system, such as the screen, storage, system logs, or network.
+
+## Pure Functions
+
+A **_pure function_** is a function which:
+
+- Given the same input, will always return the same output
+- Produces no side effects
+
+### Pure Functions Produce No Side Effects
+
+A pure function produces no side effects, which means that it can't alter any external state.
+
+[More on pure functions](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-pure-function-d1c076bec976)
+
 ## How to declare a function
 
 **_Functions_** allow us to package up lines of code that we can use, and often reuse, in our programs.
