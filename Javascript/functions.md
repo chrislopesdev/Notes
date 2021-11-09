@@ -18,6 +18,7 @@ A **_pure function_** is a function which:
 A pure function produces no side effects, which means that it can't alter any external state.
 
 [More on pure functions](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-pure-function-d1c076bec976)
+[FreeCodeCamp on pure functions](https://www.freecodecamp.org/news/what-is-a-pure-function-in-javascript-acb887375dfe/)
 
 ## How to declare a function
 

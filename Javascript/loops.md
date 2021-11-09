@@ -29,6 +29,24 @@ If a loop is missing any of these three things, the loop is broken, and can resu
 
 </br>
 
+## Do ... While Loops
+
+This is different than a `while` loop as it will perform the action at least once, before checking the condition.
+
+```javascript
+let myArray = [];
+let i = 10;
+
+do {
+  myArray.push(i);
+  i++;
+} while (i < 5);
+
+console.log(i, myArray);
+```
+
+</br>
+
 ## For Loops
 
 ### Parts of a For Loop
