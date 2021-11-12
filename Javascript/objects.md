@@ -88,6 +88,32 @@ delete ourDog.bark;
 
 </br>
 
+## Freezing an Object
+
+Freezing an object will make it so it's properties cannot be changed.
+
+```javascript
+function freezeObj() {
+  "use strict";
+  const MATH_CONSTANTS = {
+    PI: 3.14,
+  };
+
+  Object.freeze(MATH_CONSTANTS);
+
+  try {
+    MATH_CONSTANTS.PI = 99;
+  } catch (ex) {
+    console.log(ex);
+  }
+  return MATH_CONSTANTS;
+}
+
+const PI = freezeObj();
+```
+
+</br>
+
 ## Methods
 
 Creating a method is the same as defining a `key: value` pair except the `value` is a function.

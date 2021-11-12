@@ -140,6 +140,41 @@ Anonymous inline function expressions are often used with function callbacks tha
 </br>
 </br>
 
+## Arrow Functions
+
+You can simplify **_anonymous functions_** down to **_arrow functions_**:
+
+```javascript
+let magic = function () {
+  return new Date();
+};
+```
+
+Converts to:
+
+```javascript
+const magic = () => new Date();
+```
+
+</br>
+
+### Arrow Functions with Parameters
+
+```javascript
+const sayHi = function (name) {
+  return "hello " + name;
+};
+console.log(sayHi("chris"));
+```
+
+```javascript
+const sayHi = (name) => "hello " + name;
+console.log(sayHi("chris"));
+```
+
+</br>
+</br>
+
 ## Return Statements
 
 The `return` statements allows us to return a value from our function instead of just printing to the console. A function will always return a value. If a `return` value is not specified, the function will return `undefined`. The `return` keyword **_will exit the function_** and return a value.
