@@ -52,3 +52,15 @@ convertToInteger("56");
 `\t` - tab </br>
 `\b` - word boundary </br>
 `\f` - form feed
+
+</br>
+
+## parseInt Function
+
+`parseInt()` takes a string and returns an integer.
+
+```javascript
+const a = parseInt("007");
+```
+
+> The above function converts the string `007` to the integer `7`. If the first characterin the string can't be converted into a number, then it will return `NaN`.
