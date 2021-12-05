@@ -7,6 +7,8 @@
 
 OOP is about trying to make complex things simpler to read, write and maintain.
 
+</br>
+
 ## Abstraction
 
 > Abstraction is a technique for arranging complexity of computer systems. It works by establishing  a level of complexity on which a person inteacts with the system, suppressing the more complex details below the current level.
