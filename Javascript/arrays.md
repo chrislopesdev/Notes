@@ -94,7 +94,7 @@ With the `.pop()` method you do not need to pass a value, instead, `.pop()` will
 
 ### Array.splice
 
-`.spice()` is another handy method that allows you to add and remove elements from anywhere inside an array.
+`.splice()` is another handy method that allows you to add and remove elements from anywhere inside an array.
 
 `.splice()` Syntax: [MDN - splice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 
@@ -114,6 +114,45 @@ donuts.splice(-2, 0, "chocolate frosted", "glazed");
 console.log(donuts);
 // ['cookies', 'chocolate frosted', 'glazed', 'cinnamon sugar', 'creme de leche']
 ```
+
+</br>
+</br>
+
+## Spread and Rest
+
+Spread syntax (...) allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
+
+```js
+const numbersToAdd = [4, 5 , 6];
+const numbers = [0, 1, 2, 3, ...numbersToadd, 7, 8, 9];
+```
+
+> numbersToAdd is now "spread" into the numbers array </br>
+> [0, 1, 2, 3, 4, 5, 6, 7 ,8 ,9]
+
+It can be used to copy an array:
+
+```js
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1];
+```
+> creates a brand new array that is a copy off arr1
+
+</br>
+
+***REST*** turns elements into an array.
+
+```js
+function multiply(multiplier, ...theArgs) {
+  return theArgs.map(function(element) {
+    return multiplier * element;
+  })
+}
+multiply(2, 1, 2, 3);
+
+// returns [2, 4, 6]
+```
+> We can use array methods on REST
 
 </br>
 </br>
