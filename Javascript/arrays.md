@@ -38,6 +38,20 @@ console.log(donuts[1000]);
 
 </br>
 
+## Checking for the Presence of an Element with `indexOf()`
+
+`indexOf()` is a built in method that allows us to check for the presence of an element in an array. `indexOf()` takes a parameter, and when called it will return the index of the element. If the element is not in the array it will return `-1`.
+
+```js
+let fruits = ['apples', 'pears', 'oranges', 'peaches', 'pears'];
+
+fruits.indexOf('dates'); // returns -1
+fruits.indexOf('oranges'); // returns 2
+fruits.indexOf('pears'); // returns 1
+```
+
+</br>
+
 ## Properties and Methods
 
 **_Methods_** are predefined functions built into Javascript. Examples include:
