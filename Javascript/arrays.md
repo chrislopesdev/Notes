@@ -116,6 +116,21 @@ console.log(donuts);
 ```
 
 </br>
+
+### Array.slice
+
+Unlice `splice()`, the `slice()` method copies rather modifying the original array. It only takes two parameters, the start index and the stop index. The stop index includes elements up to, but ***NOT*** including the element at this index.
+
+```js
+let weatherConditions = ['rain', 'snow', 'sleet', 'hail', 'clear'];
+
+let todaysWeather = weatherConditions.slice(1, 3);
+```
+
+> todaysWeather incl: ['snow', 'sleet'] </br>
+> weatherConditions still incl: ['rain', 'snow', 'sleet', 'hail', 'clear']
+
+</br>
 </br>
 
 ## Spread and Rest
