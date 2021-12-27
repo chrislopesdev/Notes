@@ -225,3 +225,33 @@ function checkObj(checkProp) {
 //test code
 console.log(checkObj("gift"));
 ```
+
+Can also use :
+```js
+'gift' in myObj // this is results in true
+```
+
+</br>
+</br>
+
+## Iterating Through the Keys of an Object with a for...in Statement
+
+To iterate throught keys of an object you can use a `for...in` statement:
+
+```js
+for (let user in users) {
+  console.log(user);
+}
+```
+
+
+</br>
+</br>
+
+## Generate an Array of All Object Keys with `Object.keys()`
+
+You can create an array containing object keys:
+
+```js
+Object.keys(objectName);
+```
