@@ -38,7 +38,7 @@ let result = fccRegex.test(myString);
 
 ## Extract Matches
 
-Above, we've only checked to see if a pattern exists in a string or not. We can also extract the actaul matches using `.match()`.
+Above, we've only checked to see if a pattern exists in a string or not. We can also extract the actual matches using `.match()`.
 
 [Read more on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match)
 
@@ -64,7 +64,7 @@ The match method will create an array containing the matched word.
   groups: undefined ]
 ```
 
-You can use the `g` flag on the regex to return an arry containing only the word.
+You can use the `g` flag on the regex to return an array containing only the word.
 
 ```js
 ['coding']
@@ -89,7 +89,7 @@ testStr.match(repeatRegex);
 
 ## Match Anything with Wildcard Period
 
-You can use the whild card character `.` to match any on character. For example, to match `hug`, `huh`, `hut`, and `hum`, you can use the regex `/hu./` to match all four words.
+You can use the wild card character `.` to match any on character. For example, to match `hug`, `huh`, `hut`, and `hum`, you can use the regex `/hu./` to match all four words.
 
 ```js
 let humStr = "I'll hum a song";
@@ -102,7 +102,7 @@ huRegex.test(hugStr);
 
 </br>
 
-## Match Single Character with Muliple Possibilites
+## Match Single Character with Multiple Possibilities
 
 You can search for a literal pattern with some flexibility using character classes. Character classes allow you to define a group of characters you wish to match by placing them inside square brackets `[ ]`.
 
@@ -122,7 +122,7 @@ bogStr.match(bgRegex); // null
 
 The above works great with only a couple characters but would be tedious for large sets of characters. Fortunately, there is a built-in feature that makes this short and simple.
 
-Inside a character set, you can define a range of characters to match ussing a hyphen `-`. For example, to match lowercase characters a through e you would use `[a-e]`
+Inside a `character set`, you can define a range of characters to match using a hyphen `-`. For example, to match lowercase characters a through e you would use `[a-e]`
 
 ```js
 let catStr = "cat";
@@ -132,4 +132,46 @@ let bgRegex = /[a-e]at/;
 catStr.match(bgRegex); // ['cat']
 batStr.match(bgRegex); // ['bat']
 matStr.match(bgRegex); // null
+```
+
+The `-` is not limited to letters, it can also work with a range of numbers. For example, `/[0-5]/` matches any numbers between, and including, `0` and `5`.
+
+We can also combine a range of letters and numbers in a single character set.
+
+```js
+let jennyStr = 'Jenny8675309';
+let myRegex = /[a-z0-9]/ig;
+jennyStr.match(myRegex);
+```
+
+You can also create a `character set` of characters you do NOT want to match called, `negated character sets`.
+
+To create a negated character set, you place a caret character `^` after the opening square bracket, before the characters you do not want to match.
+
+```js
+/[^aeiou]/gi
+```
+
+</br>
+
+## Match Characters that Occur One or More Times
+
+You can use the `+` character to check if a character appears one or more times in a row.
+
+For example, `/a+/g` would find one match in `abc` and return `['a']`. Because of the `+`, it would also find a single match in `aabc` and return `['aa']`.
+
+If we checked the string `abab`, it would return `['a', 'a']`.
+
+</br>
+
+There is also an option that matches characters that occur ***zero or more times***. This is the `*` character.
+
+```js
+let soccerWord = "gooooooooal!";
+let gPhrase = "gut feeling";
+let oPhrase = "over the moon";
+let goRegex = /go*/;
+soccerWord.match(goRegex); // ['goooooooo']
+gPhrase.match(goRegex); // ['g']
+oPhrase.match(goRegex); // null
 ```
