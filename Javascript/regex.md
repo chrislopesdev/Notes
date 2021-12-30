@@ -190,6 +190,7 @@ Regular expressions are ***greedy by default***, so it would return `['titani']`
 
 You can change the default to use lazy matching with the `?` character. `/t[a-z]*?i/` returns `['ti']`.
 
+</br>
 
 ## Match Beginning String Patterns
 
@@ -216,3 +217,79 @@ storyRegex.test(theEnding); // true
 let noEnding = "Sometimes a story will have to end";
 storyRegex.test(noEnding); // false
 ```
+
+</br>
+
+## Match All Letters and Numbers
+
+There is a shortcut to match the alphabet: `\w` this is the same as writing `[A-Za-z0-9_]`. This character class matches upper and lowercase letters plus numbers and also includes the underscore character `_`.
+
+```js
+let longHand = /[A-Za-z0-9_]+/;
+let shortHand = /\w+/;
+let numbers = "42";
+let varNames = "important_var";
+longHand.test(numbers); // true
+shortHand.test(numbers); // true
+longHand.test(varNames); // true
+shortHand.test(varNames); // true
+```
+
+</br>
+
+## Match Everything BUT Letters and Numbers
+
+To search for non-alphanumeric characters, the opposite of the above regex. You can use `/\W/` (capital W as opposed to the lowercase used above.)
+
+```js
+let shortHand = /\W/;
+let numbers = "42%";
+let sentence = "Coding!";
+numbers.match(shortHand); // ['%']
+sentence.match(shortHand); // ['!']
+```
+
+</br>
+
+## Match All Numbers
+
+The shortcut to look for digit characters is `\d`, with a lowercase d. The equivalent of `[0-9]`.
+
+</br>
+
+## Match All Non-Numbers
+
+The shortcut for non-digit characters is `\D`, with an uppercase D. The equivalent of `[^0-9]`.
+
+<br>
+
+## Exercise: Restrict Possible Usernames
+
+Usernames are used everywhere on the internet. They are what give users a unique identity on their favorite sites.
+
+You need to check all the usernames in a database. Here are some simple rules that users have to follow when creating their username.
+
+1. Usernames can only use alpha-numeric characters.
+
+2. The only numbers in the username have to be at the end. There can be zero or more of them at the end. Username cannot start with the number.
+
+3. Username letters can be lowercase and uppercase.
+
+4. Usernames have to be at least two characters long. A two-character username can only use alphabet letters as characters.
+
+```js
+let username = "JackOfAllTrades";
+let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i;
+let result = userCheck.test(username);
+```
+
+> Code Explanation
+
+1. ^ - start of input
+2. [a-z] - first character is a letter
+3. [a-z]+ - following characters are letters
+4. \d*$ - input ends with 0 or more digits
+5. | - or
+6. ^[a-z] - first character is a letter
+7. \d\d+ - following characters are 2 or more digits
+8. $ - end of input
