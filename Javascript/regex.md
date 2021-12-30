@@ -1,5 +1,7 @@
 # REGULAR EXPRESSIONS (REGEX)
 
+[Notes taken from freeCodeCamp - Javascript Algorithms and Data Structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions)
+
 [Regular Expressions on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 
 ## Test Method
@@ -174,4 +176,43 @@ let goRegex = /go*/;
 soccerWord.match(goRegex); // ['goooooooo']
 gPhrase.match(goRegex); // ['g']
 oPhrase.match(goRegex); // null
+```
+
+</br>
+
+## Find Characters with Lazy Matching
+
+In regular expressions, a ***greedy*** match finds the longest possible part of a string that fits the regex pattern. The alternative is called a ***lazy*** match, which finds the smallest possible part of the string that satisfies the regex pattern.
+
+You can apply the regex `/t[a-z]*i/` to the string 'titanic'. This regex is looking for a pattern that starts with 't', ends in 'i', and has some characters in between.
+
+Regular expressions are ***greedy by default***, so it would return `['titani']`, finding the largest sub-string possible.
+
+You can change the default to use lazy matching with the `?` character. `/t[a-z]*?i/` returns `['ti']`.
+
+
+## Match Beginning String Patterns
+
+The caret character `^` we used before to create a negated character set `[^thingsThatWillNotBeMatched]`. Outside a character set, the caret is used to search for patterns at the beginning of strings.
+
+```js
+let firstString = "Ricky is first and can be found.";
+let firstRegex = /^Ricky/;
+firstRegex.test(firstString); // true
+let notFirst = "You can't find Ricky now.";
+firstRegex.test(notFirst); // false
+```
+
+<br>
+
+## Match Ending String Patterns
+
+You can search for patterns at the end of strings using the `$` at the end of the regex.
+
+```js
+let theEnding = "This is a never ending story";
+let storyRegex = /story$/;
+storyRegex.test(theEnding); // true
+let noEnding = "Sometimes a story will have to end";
+storyRegex.test(noEnding); // false
 ```
