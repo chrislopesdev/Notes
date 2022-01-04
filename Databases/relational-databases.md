@@ -34,3 +34,6 @@ A relational database organizes data into tables and links them, based on define
 
 [Coding Horror - Visual Explanation of SQL Joins](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
 
+## Cardinality
+
+![Cardinality](../docs/CardinalityGuide.png)
