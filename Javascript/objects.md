@@ -1,6 +1,6 @@
 # OBJECTS
 
-Obects are data structures in Javascript that lets you store data about a particular thing, and helps you keep track of that data by using a "key". An empty object can be created using:
+Objects are data structures in Javascript that lets you store data about a particular thing, and helps you keep track of that data by using a "key". An empty object can be created using:
 
 ```javascript
 let object = {};

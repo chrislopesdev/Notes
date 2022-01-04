@@ -27,3 +27,10 @@ A relational database organizes data into tables and links them, based on define
 | 5      | select    | Returns the final data                  |
 | 6      | order by  | Sorts the final data                    |
 | 7      | limit     | Limits the returned data to a row count |
+
+</br>
+
+## JOIN
+
+[Coding Horror - Visual Explanation of SQL Joins](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
+
