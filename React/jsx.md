@@ -4,8 +4,8 @@
 
 ### All tags must be closed!
 
-* Open and close tags (`<div>...</div>`)
-* Self-closing tag (`<img />`)
+- Open and close tags (`<div>...</div>`)
+- Self-closing tag (`<img />`)
 
 <br>
 
@@ -14,8 +14,7 @@
 ```jsx
 <div>
   <ul>
-    <li>
-    </li>
+    <li></li>
   </ul>
 </div>
 ```
@@ -26,20 +25,24 @@
 
 A function can only return one value. A component is defined using JavaScript function so the same rules apply.
 
-***Good:***
+**_Good:_**
+
 ```jsx
 return (
-  <div> {/* root element */}
+  <div>
+    {' '}
+    {/* root element */}
     <input />
   </div>
-)
+);
 
 /* becomes */
 
-return React.createElement('div', null, React.createElement('input', null))
+return React.createElement('div', null, React.createElement('input', null));
 ```
 
-***Bad:***
+**_Bad:_**
+
 ```jsx
 return (
   <div>
@@ -68,4 +71,26 @@ return (
     {/* allowed */}
   </div>
 )
+```
+
+<br />
+
+## Rendering Arrays in JSX
+
+When an array is referenced in JSX, the values of the array are automatically looped and rendered.
+
+```jsx
+const someArray = [<p>one</p>, <p>two</p>, <p>three</p>];
+
+return <div>{someArray}</div>;
+```
+
+The above example will return this HTML:
+
+```html
+<div>
+  <p>one</p>
+  <p>two</p>
+  <p>three</p>
+</div>
 ```
